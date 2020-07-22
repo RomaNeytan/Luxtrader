@@ -1,0 +1,78 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// Vars
+
+@import "vars.scss";
+
+// Burger
+
+@import "burger.scss";
+
+@import "fonts.scss";
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&subset=cyrillic-ext");
+
+// Blocks
+
+@import "header.scss";
+
+.global-wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+// Основная сетка
+
+.container {
+    width: 100%;
+    max-width: 955px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 767px) {
+        max-width: none;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: "PT Sans";
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
