@@ -1,6 +1,8 @@
 .header {
     background-color: #1c242a;
     padding: 21px 0 26px;
+    position: relative;
+    z-index: 1122;
 
     &__container {
         display: flex;

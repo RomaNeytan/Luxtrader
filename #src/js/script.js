@@ -1,3 +1,5 @@
+@@include('jquery-3.5.1.min.js');
+@@include('slick.min.js');
 //JS-ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 
 function testWebP(callback) {
@@ -21,26 +23,62 @@ testWebP(function (support) {
 // Menu _last iccon
 
 let user_iccon = document.querySelector('.user-header__iccon');
-user_iccon.addEventListener("click", function(e){
+user_iccon.addEventListener("click", function (e) {
     let user_menu = document.querySelector('.user-header__menu');
     user_menu.classList.toggle('_active');
 });
 
 // Close podmain menu
 
-document.documentElement.addEventListener("click",function(e){
-    if(!e.target.closest('.user-header')){
+document.documentElement.addEventListener("click", function (e) {
+    if (!e.target.closest('.user-header')) {
         let user_menu = document.querySelector('.user-header__menu');
         user_menu.classList.remove('_active');
     }
 });
 
-$(function(){
+$(function () {
     // Burger menu
-    $("#burger").on("click", function(event){
+    $("#burger").on("click", function (event) {
         event.preventDefault();
 
         $(this).toggleClass("_active");
         $(".header-menu_body").toggleClass("_active");
     });
+
+    // Ibg
+
+    function ibg() {
+
+        $.each($('.ibg'), function (index, val) {
+            if ($(this).find('img').length > 0) {
+                $(this).css('background-image', 'url("' + $(this).find('img').attr('src') + '")');
+            }
+        });
+    }
+
+    ibg();
+
+    // Slick-slider
+
+    $(".banner-slider-slick").slick({
+        dots: false,
+        arrows:true,
+        fade:true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        loop:true,
+        infinite:true,
+        responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                adaptiveHeight:true  
+              }
+            }
+          ]
+    });
 });
+

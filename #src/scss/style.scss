@@ -12,6 +12,14 @@
 
 @import "vars.scss";
 
+// Ibg
+
+@import "ibg.scss";
+
+// Slick
+
+@import "slick.scss";
+
 // Burger
 
 @import "burger.scss";
@@ -19,15 +27,22 @@
 @import "fonts.scss";
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&subset=cyrillic-ext");
 
+@import "headtitle.scss";
+
 // Blocks
 
-@import "header.scss";
+@import "blocks/header.scss";
+@import "blocks/banner.scss";
 
 .global-wrapper {
     width: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.page{
+    
 }
 
 // Основная сетка
