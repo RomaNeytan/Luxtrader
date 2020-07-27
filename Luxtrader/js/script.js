@@ -67,13 +67,10 @@ $(function () {
     $(".banner-slider-slick").slick({
         dots: false,
         arrows:true,
-        fade:true,
         infinite: false,
-        speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
         loop:true,
-        infinite:true,
         responsive: [
             {
               breakpoint: 600,

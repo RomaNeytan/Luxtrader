@@ -25,7 +25,7 @@
 @import "burger.scss";
 
 @import "fonts.scss";
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&display=swap&subset=cyrillic-ext");
 
 @import "headtitle.scss";
 
@@ -33,6 +33,7 @@
 
 @import "blocks/header.scss";
 @import "blocks/banner.scss";
+@import "blocks/lots.scss";
 
 .global-wrapper {
     width: 100%;

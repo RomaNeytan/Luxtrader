@@ -1,4 +1,5 @@
 .title {
+    text-align: center;
     &__item {
         font-family: "ceremonious";
         font-size: 40px;
@@ -12,9 +13,16 @@
         line-height: 1;
         color:$white;
         text-transform: uppercase;
+        &_white{
+            color:$white;
+        }
+        &_black{
+            color:#1c242a;
+        }
     }
 
     &__text {
+        flex:1 1 auto;
         width: 100%;
         max-width:688px;
         margin: 25px auto 0;
